@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Epsilon 3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap">
+    <style>
+        body {
+            background-color: white;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #navbar {
+            background-color: #333;
+            display: block;
+            position: fixed;
+            text-align: center;
+            top: -50px;
+            transition: top 0.3s;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #navbar a {
+            color: white;
+            display: inline-block;
+            font-size: 17px;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .section {
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 100%;
+            margin: 20px;
+            padding: 20px;
+            position: relative;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            border-radius: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .slideshow-container {
+            margin: auto;
+            max-width: 100%;
+            position: relative;
+        }
+
+        .text {
+            bottom: 8px;
+            color: white;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+
+        .dot {
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            height: 15px;
+            margin: 0 2px;
+            transition: background-color 0.6s ease;
+            width: 15px;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        .fade {
+            animation-duration: 1.5s;
+            animation-name: fade;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px;
+            }
+        }
+
+        .subsections {
+            display: flex;
+            flex-direction: column;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        footer {
+            background-color: #333;
+            bottom: 0;
+            color: white;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>The Epsilon 3: A Smart Shoe</h1>
+    </header>
+    <div id="navbar">
+        <a href="#top">Top</a>
+        <a href="#features">Features</a>
+        <a href="#options">Options</a>
+        <a href="#prices">Prices</a>
+        <a href="#reviews">Reviews</a>
+    </div>
+    <main>
+        <div class="container">
+            <div class="section">
+                <div class="slideshow-container">
+                    <h2>Revolutionize Your Run</h2>
+                    <p>The Epsilon 3 adapts to your foot and tracks your performance like never before!</p>
+                    <div class="mySlides fade">
+                        <img src="GOB.png">
+                        <div class="text">Gray/Orange/Blue</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="GYP.png">
+                        <div class="text">Gray/Yellow/Purple</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="GRG.png">
+                        <div class="text">Gray/Red/Green</div>
+                    </div>
+                </div>
+                <p></p>
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <div class="section">
+                <div class="subsections">
+                    <div id="features" class="section">
+                        <h2>Features</h2>
+                        <ul>
+                            <li>Real-time performance tracking</li>
+                            <li>Adaptive cushioning technology</li>
+                            <li>Breathable, water-resistant material</li>
+                            <li>Integrated GPS and route planning</li>
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <div id="options" class="section">
+                            <h2>Options</h2>
+                            <p>Available colors:</p>
+                            <ul>
+                                <li>Gray/Orange/Blue</li>
+                                <li>Gray/Yellow/Purple</li>
+                                <li>Gray/Red/Green</li>
+                            </ul>
+                            <p>Available sizes:</p>
+                            <ul>
+                                <li>Men's 6&ndash;16</li>
+                                <li>Women's 7.5&ndash;17.5</li>
+                            </ul>
+                        </div>
+                        <div class="section">
+                            <h2>Select Your Options</h2>
+                            <form action="/action_page.php">
+                                <label for="color">Select a color:</label>
+                                <select id="color" name="color" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="g-o-b">Gray/Orange/Blue</option>
+                                    <option value="g-y-p">Gray/Yellow/Purple</option>
+                                    <option value="g-r-g">Gray/Red/Green</option>
+                                </select>
+                                <p></p>
+                                <label for="size">Select a size:</label>
+                                <select id="size" name="size" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="m6-w7.5">Men's 6/Women's 7.5</option>
+                                    <option value="m6.5-w8">Men's 6.5/Women's 8</option>
+                                    <option value="m7-w8.5">Men's 7/Women's 8.5</option>
+                                    <option value="m7.5-w9">Men's 7.5/Women's 9</option>
+                                    <option value="m8-w9.5">Men's 8/Women's 9.5</option>
+                                    <option value="m8.5-w10">Men's 8.5/Women's 10</option>
+                                    <option value="m9-w10.5">Men's 9/Women's 10.5</option>
+                                    <option value="m9.5-w11">Men's 9.5/Women's 11</option>
+                                    <option value="m10-w11.5">Men's 10/Women's 11.5</option>
+                                    <option value="m10.5-w12">Men's 10.5/Women's 12</option>
+                                    <option value="m11-w12.5">Men's 11/Women's 12.5</option>
+                                    <option value="m11.5-w13">Men's 11.5/Women's 13</option>
+                                    <option value="m12-w13.5">Men's 12/Women's 13.5</option>
+                                    <option value="m12.5-w14">Men's 12.5/Women's 14</option>
+                                    <option value="m13-w14.5">Men's 13/Women's 14.5</option>
+                                    <option value="m14-w15.5">Men's 14/Women's 15.5</option>
+                                    <option value="m15-w16.5">Men's 15/Women's 16.5</option>
+                                    <option value="m16-w17.5">Men's 16/Women's 17.5</option>
+                                </select>
+                                <p></p>
+                                <label for="price">Select a price:</label>
+                                <select id="price" name="price" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="199.99">$199.99</option>
+                                    <option value="249.99">$249.99</option>
+                                </select>
+                                <p></p>
+                                <input type="submit" value="ADD TO BAG">
+                            </form>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div id="prices" class="section">
+                        <h2>Prices</h2>
+                        <p>Standard: $199.99</p>
+                        <p>Premium: $249.99 (includes extra cushioning and extended warranty)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="reviews" class="section">
+            <h2>Reviews</h2>
+            <p>"Game changer for my running routine!
+                The Epsilon 3 fits like a glove and adapts perfectly to my foot.
+                I love the real-time tracking feature; it keeps me motivated on my runs.
+                The cushioning is outstanding, making every step feel like a breeze.
+                Highly recommend!" &mdash; Alex T.</p>
+            <p>"As a trail runner, I need shoes that can handle various terrains.
+                The Epsilon 3 is both supportive and flexible.
+                The grip is outstanding, and the breathability keeps my feet cool.
+                I'd love to see more options in neutral colors!" &mdash; Sam J.</p>
+            <p>"I purchased the Epsilon 3 for my morning runs, and I'm in love!
+                They fit perfectly and provide the support I need.
+                The integrated GPS is a fantastic touch, making it easy to track my progress.
+                I can't imagine running in anything else!" &mdash; Taylor M.</p>
+            <p>"The Epsilon 3 has completely changed my running game!
+                The moment I slipped them on, I felt the incredible cushioning.
+                The real-time stats motivate me to push harder.
+                I've already recommended them to all my friends!" &mdash; Jordan F.</p>
+            <p>"I've been using the Epsilon 3 for my daily runs, and they perform wonderfully.
+                The grip is excellent, and they provide great stability.
+                My only minor issue is that they took a few runs to break in, but now they're perfect!" &mdash; Chris W.</p>
+            <p>"The Epsilon 3 is a game changer!
+                I've noticed significant improvements in my performance thanks to the real-time tracking and personalized feedback.
+                Plus, they're incredibly comfortable for long runs.
+                I can't recommend them enough!" &mdash; Jamie L.</p>
+            <p>"Whether you're a beginner or a seasoned runner, the Epsilon 3 is perfect!
+                The cushioning is like running on clouds, and the GPS functionality is a fantastic bonus.
+                I've recommended them to all my running friends!" &mdash; Casey R.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 The Epsilon 3. All rights reserved.</p>
+    </footer>
+    <script>
+        let isScrolling = false;
+        window.onscroll = function () {
+            if (!isScrolling) {
+                scrollFunction();
+            }
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 121 || document.documentElement.scrollTop > 121) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+        }
+        const navbarLinks = document.querySelectorAll('#navbar a');
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById("navbar").style.top = "-50px";
+                isScrolling = true;
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 300);
+            });
+        });
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000);
+        }
+    </script>
+</body>
+
+</html>
